@@ -1,0 +1,131 @@
+@import url('https://fonts.google.com/specimen/Raleway');
+@import url('https://fonts.google.com/specimen/Open+Sans');
+
+:root{
+
+    /* Colors */
+    --primary: hsl(243, 87%, 12%);
+    --primary-2: hsl(238, 22%, 44%);
+    --accent: hsl(224, 93%, 58%);
+    --accent-2: hsl(170, 45%, 43%);
+    --neutral: hsl(240, 75%, 98%);
+    --neutral-2: hsl(0, 0%, 75%);
+
+    /* Fonts */
+    --headings: "Raleway", sans-serif;
+    --body: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: 16px;
+    font-family: var(--body);
+    background-color: var(--neutral);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+main {
+    flex: 1;
+}
+
+.content {
+    max-width: 90%;
+    margin: auto;
+}
+
+.button {
+    background-color: var(--accent);
+    width: 200px;
+    padding: 1rem 0;
+    border: none;
+    color: white;
+    border-radius: .2rem;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    padding: 3rem 0;
+}
+
+header .wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header ul {
+    list-style: none;
+}
+
+header ul li {
+    display: inline-block;
+    margin-left: 3rem;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+header .logo img {
+    height: 35px;
+}
+
+
+/* Hero */
+#hero {
+    padding: 2rem 0;
+}
+
+#hero .wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+}
+
+#hero img {
+    width: 50%;
+}
+
+#hero .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#hero h1 {
+    font-size: 2.5rem;
+    font-family: var(--headings);
+    line-height: calc(2.5rem * 1.4);
+    margin-bottom: 1rem;
+}
+
+#hero p {
+    line-height: calc(1rem * 1.4);
+    margin-bottom: 1rem;
+}
+
+#hero form input {
+    padding: 1rem;
+    width: 300px;
+    border-radius: .2rem;
+    border: 1px solid grey;
+    margin-right: .5rem;
+}
