@@ -8,8 +8,10 @@
     --primary-2: hsl(238, 22%, 44%);
     --accent: hsl(224, 93%, 58%);
     --accent-2: hsl(170, 45%, 43%);
-    --neutral: hsl(240, 75%, 98%);
+    --neutral: hsl(240, 80%, 98%);
     --neutral-2: hsl(0, 0%, 75%);
+    --accent-hover: hsl(224, 92%, 64%);
+    --accent-2-hover: hsl(170, 56%, 57%);
 
     /* Fonts */
     --headings: "Raleway", sans-serif;
@@ -38,7 +40,7 @@ main {
 }
 
 .content {
-    max-width: 90%;
+    max-width: 1440px;
     margin: auto;
 }
 
@@ -50,6 +52,19 @@ main {
     color: white;
     border-radius: .2rem;
     cursor: pointer;
+    transition: .2s;
+}
+
+.button:hover {
+    background-color: var(--accent-hover);
+}
+
+.illustration {
+    width: 50%;
+}
+
+.illustration img {
+    width: 100%;
 }
 
 
@@ -102,10 +117,6 @@ header .logo img {
     gap: 3rem;
 }
 
-#hero img {
-    width: 50%;
-}
-
 #hero .text {
     display: flex;
     flex-direction: column;
@@ -131,6 +142,7 @@ header .logo img {
     border-radius: .2rem;
     border: 1px solid grey;
     margin-right: .5rem;
+    margin-bottom: .5rem;
 }
 
 
@@ -144,10 +156,6 @@ header .logo img {
     display: flex;
     flex-direction: row-reverse;
     gap: 3rem;
-}
-
-#testimonial img.illustration {
-    width: 40%;
 }
 
 img.curve {
@@ -180,6 +188,10 @@ img.curve {
     width: max-content;
 }
 
+#testimonial a:hover {
+    color: var(--accent-2-hover);
+}
+
 #testimonial .text {
     display: flex;
     flex-direction: column;
@@ -194,12 +206,14 @@ img.curve {
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: 0 0 15px #0000001a;
+    text-align: left;
 }
 
 #testimonial .testimonial-card .name {
     display: flex;
     flex-direction: row;
     align-items: center;
+    text-align: left;
 }
 
 #testimonial .testimonial-card .name img {
@@ -225,12 +239,12 @@ img.curve {
 #cta .wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 3rem;
 }
 
 #cta .text {
-    width: 40%;
+    width: 50%;
 }
 
 #cta h2 {
@@ -239,9 +253,13 @@ img.curve {
     margin-bottom: 1rem;
 }
 
+#cta form {
+    flex: 1;
+}
+
 #cta form input {
     display: block;
-    width: 500px;
+    width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
@@ -252,4 +270,135 @@ img.curve {
 
 #cta form button {
     box-shadow: 0 5px 5px #0000001e;
+}
+
+
+/* Footer */
+footer {
+    padding: 5rem 0;
+    background-color: var(--primary);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--accent);
+}
+
+footer .logo img {
+    color: white;
+    margin-bottom: 2rem;
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+footer .contact a {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+footer .links {
+    margin-bottom: 3rem;
+}
+
+footer .links ul {
+    list-style: none;
+}
+
+footer .links ul li {
+    margin-bottom: 1rem;
+}
+
+
+/* Media queries */
+@media screen and (max-width: 1600px) {
+    .content {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .illustration {
+        width: 100%;
+    }
+
+    #hero .wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #testimonial .wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #testimonial .text {
+        align-items: center;
+
+    }
+
+    #cta .wrap {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #cta .text {
+        width: 100%;
+    }
+
+    #cta form {
+        width: 300px;
+    }
+
+    footer .row {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    header ul li {
+        margin-left: 1.5rem;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        line-height: calc(2rem * 1.4);
+    }
+
+    #hero form input {
+        margin-right: 0;
+    }
+
+    #testimonial h2 {
+        font-size: 1.5rem;
+        line-height: calc(2rem * 1.4);
+    }
+
+    #testimonial .testimonial-card {
+        width: 90%;
+    }
+
+    #cta h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .button {
+        width: 300px;
+    }
 }
