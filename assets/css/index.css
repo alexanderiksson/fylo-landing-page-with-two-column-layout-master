@@ -125,7 +125,7 @@ header .logo img {
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-family: var(--headings);
     line-height: calc(3rem * 1.4);
     margin-bottom: 1rem;
@@ -233,7 +233,7 @@ img.curve {
 #cta {
     background-color: var(--primary-2);
     color: white;
-    padding: 5rem 0;
+    padding: 6rem 0;
 }
 
 #cta .wrap {
@@ -289,7 +289,7 @@ footer a:hover {
 }
 
 footer .logo img {
-    color: white;
+    height: 40px;
     margin-bottom: 2rem;
 }
 
@@ -321,6 +321,16 @@ footer .links ul {
 
 footer .links ul li {
     margin-bottom: 1rem;
+}
+
+footer .social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+footer .social img {
+    width: 32px;
 }
 
 
@@ -367,6 +377,14 @@ footer .links ul li {
     footer .row {
         flex-direction: column;
     }
+
+    .button {
+        width: 300px;
+    }
+
+    header .logo img {
+        height: 30px;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -399,6 +417,14 @@ footer .links ul li {
 
 @media screen and (max-width: 480px) {
     .button {
-        width: 300px;
+        width: 100%;
+    }
+
+    #cta form {
+        width: 100%;
+    }
+
+    #hero form input {
+        width: 100%;
     }
 }
