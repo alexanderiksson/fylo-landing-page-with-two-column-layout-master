@@ -1,5 +1,5 @@
-@import url('https://fonts.google.com/specimen/Raleway');
-@import url('https://fonts.google.com/specimen/Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 :root{
 
@@ -26,7 +26,7 @@ body,
 html {
     font-size: 16px;
     font-family: var(--body);
-    background-color: var(--neutral);
+    background-color: white;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -49,6 +49,7 @@ main {
     border: none;
     color: white;
     border-radius: .2rem;
+    cursor: pointer;
 }
 
 
@@ -91,7 +92,8 @@ header .logo img {
 
 /* Hero */
 #hero {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    margin-bottom: 6rem;
 }
 
 #hero .wrap {
@@ -108,18 +110,19 @@ header .logo img {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
 }
 
 #hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: var(--headings);
-    line-height: calc(2.5rem * 1.4);
+    line-height: calc(3rem * 1.4);
     margin-bottom: 1rem;
 }
 
 #hero p {
     line-height: calc(1rem * 1.4);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 #hero form input {
@@ -128,4 +131,125 @@ header .logo img {
     border-radius: .2rem;
     border: 1px solid grey;
     margin-right: .5rem;
+}
+
+
+/* Testimonail */
+#testimonial {
+    background-color: var(--neutral);
+    padding: 2rem 0 5rem 0;
+}
+
+#testimonial .wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 3rem;
+}
+
+#testimonial img.illustration {
+    width: 40%;
+}
+
+img.curve {
+    width: 100%;
+    height: auto;
+    transform: translateY(5px);
+}
+
+#testimonial h2 {
+    font-family: var(--headings);
+    font-size: 2.5rem;
+    line-height: calc(3rem * 1.4);
+    margin-bottom: 1rem;
+}
+
+#testimonial p {
+    line-height: calc(1rem * 1.4);
+    margin-bottom: 1rem;
+}
+
+#testimonial a {
+    display: inline-flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    color: var(--accent-2);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-2);
+    padding-bottom: 5px;
+    width: max-content;
+}
+
+#testimonial .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+#testimonial .testimonial-card {
+    margin-top: 3rem;
+    background-color: white;
+    width: 400px;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 15px #0000001a;
+}
+
+#testimonial .testimonial-card .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#testimonial .testimonial-card .name img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+#testimonial .testimonial-card .name p {
+    margin: 0;
+    font-size: .75rem;
+}
+
+
+/* CTA */
+#cta {
+    background-color: var(--primary-2);
+    color: white;
+    padding: 5rem 0;
+}
+
+#cta .wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cta .text {
+    width: 40%;
+}
+
+#cta h2 {
+    font-family: var(--headings);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#cta form input {
+    display: block;
+    width: 500px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 5px 5px #0000001e;
+
+}
+
+#cta form button {
+    box-shadow: 0 5px 5px #0000001e;
 }
